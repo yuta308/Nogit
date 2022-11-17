@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+
+<div class="row"></div>
+<div class="row-cols-md-9"></div>
+<div class="card">
+    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+    <div class="card-body">
+      <h5 class="card-title">{{object.title}}</h5>
+      <p class="card-text">{{object.content}}</p>
+      <a href="{% url 'myapp:post_update' object.id %}" class="btn btn-primary">更新</a>
+      <a href="{% url 'myapp:post_delete' object.id %}" class="btn btn-danger">削除</a>
+    </div>
+  </div>
+
+
+{% endblock %}
